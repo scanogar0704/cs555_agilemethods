@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarketNest | About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style2.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="logo.png" alt="MarketNest Logo" width="30" height="30" class="d-inline-block align-text-top">
+      MarketNest
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ps-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="darkModeToggle">
+            <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="py-5 bg-light text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">About Us</h1>
+    <p class="lead">Building brands that connect and grow through innovative marketing.</p>
+  </div>
+</header>
+
+<!-- Our Mission Section (Two Columns Layout) -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Left Column: Our Mission -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Our Mission</h5>
+            <p class="card-text">
+                At MarketNest, our mission is to empower brands to grow, connect, and thrive through innovative, data-driven marketing solutions. We nest your vision at the heart of powerful strategies that spark engagement, build loyalty, and drive results. With creativity, integrity, and insight, we’re here to turn your market presence into lasting impact.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Company Background -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Company Background</h5>
+            <p class="card-text">
+                MarketNest was founded on the belief that marketing should be both creative and strategic. We exist to be the "nest" where bold ideas take flight and brands grow with purpose.
+                What started as a small team of passionate marketers has become a full-service agency offering smart, customized solutions. From startups to established names, we help brands connect, stand out, and thrive in a fast-changing digital world.
+                At MarketNest, we don’t just market — we build lasting relationships and elevate brands to their full potential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark text-white text-center">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 MarketNest. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", () => {
+    body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+  });
+</script>
+</body>
+</html>
+
+
